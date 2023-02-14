@@ -30,7 +30,6 @@ export default () => {
     return (
         <div>
             <h1>Lista de Productos</h1>
-            <h2>Prueba para ver si funciona mi repo</h2>
             <ProductForm onSubmitProp={createProduct} initialTitle="" initialPrice="" initialDescription="" />
             <hr/>
             {

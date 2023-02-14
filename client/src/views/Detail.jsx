@@ -25,7 +25,7 @@ export default (props) => {
       <p>Price: {product.price}</p>
       <p>Description: {product.description}</p>
       <button className="edit-btn">
-        <Link to={"/products/" + product._id + "/edit"}>Editar</Link>
+        <Link to={"/products/" + product._id + "/edit"} className="edit-btn">Editar</Link>
       </button>
       <DeleteButton
               productId={product._id}

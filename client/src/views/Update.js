@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 import ProductForm from "../components/ProductForm";
 import DeleteButton from "../components/DeleteButton";
 import './Update.css'
 
 export default (props) => {
   const { id } = props.match.params;
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState({});
   const [loaded, setLoaded] = useState(false);
+
+  const history = useHistory();
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/products/' + id)
@@ -19,7 +22,8 @@ export default (props) => {
 
   const updateProduct = producto => {
     axios.put('http://localhost:8000/api/products/' + id, producto)
-        .then(res => console.log(res));
+        .then(res => console.log(res))
+        .then(history.push("/products/"+id))
   }
 
   return (

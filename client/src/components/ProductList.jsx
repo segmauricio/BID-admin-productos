@@ -1,22 +1,9 @@
-import {React, useState, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import "./ProductList.css";
 import DeleteButton from "./DeleteButton";
 
-export default (props) => {
-  const [products, setProducts] = useState([]);
-
-  const removeFromDom = (personId) => {
-    setProducts(products.filter((product) => product._id != product.Id));
-  };
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8000/api/products")
-      .then((res) => setProducts(res.data));
-  }, []);
-
+export default (props) => {              //listadeproductos en vez de props
   return (
     <div className="list-body">
       <h2>All Products:</h2>
@@ -28,7 +15,7 @@ export default (props) => {
               <p><Link to={`/products/${product._id}`}>{product.title}</Link></p>
               <DeleteButton
               productId={product._id}
-              successCallback={() => removeFromDom(product._id)}
+              successCallback={() => props.removeFromDom(product._id)}
             />
             </div>
           );

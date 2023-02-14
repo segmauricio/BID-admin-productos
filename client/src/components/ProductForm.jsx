@@ -3,13 +3,11 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./ProductForm.css";
 
-export default (props) => {
-  const { initialTitle, initialPrice, initialDescription, onSubmitProp } = props;
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-
-  const history = useHistory();
+export default ({ initialTitle, initialPrice, initialDescription, onSubmitProp }) => {
+  // const { initialTitle, initialPrice, initialDescription, onSubmitProp } = props;
+  const [title, setTitle] = useState(initialTitle);
+  const [price, setPrice] = useState(initialPrice);
+  const [description, setDescription] = useState(initialDescription);
 
   const onSubmitHandler = (e) => {
     e.preventDefault()

@@ -3,8 +3,8 @@ import axios from "axios";
 import './DeleteButton.css';
 import { useHistory } from "react-router-dom";
 
-export default (props) => {
-  const { productId, successCallback } = props;
+export default ({ productId, successCallback }) => {
+  //const { productId, successCallback } = props;
   const history = useHistory();
 
   const deleteProduct = (e) => {
