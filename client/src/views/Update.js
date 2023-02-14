@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import ProductForm from "../components/ProductForm";
 import DeleteButton from "../components/DeleteButton";
 import './Update.css'
+import HomeButton from "../components/HomeButton";
 
 export default (props) => {
   const { id } = props.match.params;
@@ -39,6 +40,7 @@ export default (props) => {
                 />
                 <div style={{marginTop: "15px", marginLeft:"-10px"}}>
                   <DeleteButton productId={product._id} successCallback={() => props.history.push("/products")} />
+                  <HomeButton/>
                 </div>
                 
             </>

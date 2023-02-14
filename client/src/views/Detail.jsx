@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Detail.css";
 import DeleteButton from "../components/DeleteButton";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeButton from "../components/HomeButton";
 
 export default (props) => {
   const [product, setProducto] = useState({});
@@ -24,13 +26,14 @@ export default (props) => {
       <p style={{ fontSize: "25px" }}>{product.title}</p>
       <p>Price: {product.price}</p>
       <p>Description: {product.description}</p>
-      <button className="edit-btn">
+      <button className="edit-btn" color="warning">
         <Link to={"/products/" + product._id + "/edit"} className="edit-btn">Editar</Link>
       </button>
       <DeleteButton
               productId={product._id}
               successCallback={() => removeFromDom(product._id)}
       />
+      <HomeButton/>
     </div>
   );
 };

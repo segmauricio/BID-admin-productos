@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./ProductForm.css";
 
-export default ({ initialTitle, initialPrice, initialDescription, onSubmitProp }) => {
+export default ({ initialTitle, initialPrice, initialDescription, onSubmitProp}) => {
   // const { initialTitle, initialPrice, initialDescription, onSubmitProp } = props;
   const [title, setTitle] = useState(initialTitle);
   const [price, setPrice] = useState(initialPrice);
@@ -12,7 +12,7 @@ export default ({ initialTitle, initialPrice, initialDescription, onSubmitProp }
   const onSubmitHandler = (e) => {
     e.preventDefault()
     onSubmitProp( {title, price, description});
-  };
+  }
   
   return (
     <div className="body">

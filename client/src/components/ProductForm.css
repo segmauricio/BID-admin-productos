@@ -10,7 +10,7 @@
     padding: 15px;
     background-color: #f6f6f6;
     margin-bottom: 20px;
-    width: 300px;
+    width: 350px;
     justify-content: left;
     border-radius: 5px;
 }
@@ -22,7 +22,7 @@
 }
 .field input{
     border-style: none;
-    flex: 2;
+    flex: 1.7;
     height: 25px;
     border-radius: 5px;
     padding-left: 10px;
