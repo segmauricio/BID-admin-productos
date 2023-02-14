@@ -1,0 +1,13 @@
+.edit-btn{
+    background-color: #f0f6a6;
+    border-style: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.edit-btn:hover{
+    background-color: yellow;
+}

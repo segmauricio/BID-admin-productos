@@ -1,0 +1,17 @@
+.list-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.link-productos{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.listadeProductos *{
+    color: black;
+    font-size: 16px;
+    margin-top: 10px;
+    flex: 7;
+    margin-bottom: 10px;
+}
